@@ -22,7 +22,10 @@ def encrypt_flag(flag):
             n = -n % p
             ciphertext.append(n)
     return ciphertext
-    
+
+#En este caso si se cifro tomando en cuenta la propiedad de una potencia de un numero primo, por lo que se puede descifrar con la propiedad de que si a^((p-1)/2) == 1 entonces es un cuadrado perfecto y si no lo es, no es un cuadrado perfecto.
+#Por lo que se puede descifrar el mensaje con la propiedad de que si a^((p-1)/2) == 1 entonces es un cuadrado perfecto y si no lo es, no es un cuadrado perfecto.
+
 def decrypt_flag(flag):
     deciphertext = ""
     for r in flag:
